@@ -37,27 +37,28 @@ enableCrypt    = False
 # CDA specific configuration information
 #
 [ConstrainedDevice]
-deviceLocationID = constraineddevice001
-enableEmulator   = False
-enableSenseHAT   = False
-enableMqttClient = True
-enableCoapServer = False
-enableCoapClient = False
+DEVICE_LOCATION_ID_KEY = constraineddevice001
+ENABLE_EMULATOR_KEY    = False
+ENABLE_SIMULATOR_KEY   = True  # Added this line for simulator enablement
+enableSenseHAT         = False
+enableMqttClient       = True
+enableCoapServer       = False
+enableCoapClient       = False
 enableSystemPerformance = True
-enableSensing    = False
-enableLogging    = True
-pollCycleSecs    = 5
-testGdaDataPath  = /tmp/gda-data
-testCdaDataPath  = /tmp/cda-data
-testEmptyApp     = False
+enableSensing          = False
+enableLogging          = True
+pollCycleSecs          = 5
+testGdaDataPath        = /tmp/gda-data
+testCdaDataPath        = /tmp/cda-data
+testEmptyApp           = False
 
 # configurable limits for sensor simulation
-humiditySimFloor   =   35.0
-humiditySimCeiling =   45.0
-pressureSimFloor   =  990.0
-pressureSimCeiling = 1010.0
-tempSimFloor       =   15.0
-tempSimCeiling     =   25.0
+humiditySimFloor       = 35.0
+humiditySimCeiling     = 45.0
+pressureSimFloor       = 990.0
+pressureSimCeiling     = 1010.0
+tempSimFloor           = 15.0
+tempSimCeiling         = 25.0
 
 # configurable limits for actuator triggers
 handleTempChangeOnDevice = True
@@ -73,7 +74,8 @@ streamPath          = stream
 streamEncoding      = MJPG
 streamFrameWidth    = 1440
 streamFrameHeight   = 1080
-streamFps           =   30
+streamFps           = 30
 imageFileExt        = .png
 videoFileExt        = .avi
 minMotionPixelsDiff = 10000
+
